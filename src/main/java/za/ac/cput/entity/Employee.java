@@ -10,7 +10,7 @@ public class Employee {
     private Employee() {
 
     }
-    private Employee(Employee.Builder builder) {
+    private Employee(Builder builder) {
         this.employeeID = builder.employeeID;
         this.employeeName = builder.employeeName;
         this.depID = builder.depID;
@@ -67,28 +67,31 @@ public class Employee {
         private String depName;
 
         //builder setters
-        public void setEmployeeID(String employeeID) {
+        public Builder setEmployeeID(String employeeID) {
             this.employeeID = employeeID;
+            return this;
         }
 
-        public void setEmployeeName(String employeeName) {
+        public Builder setEmployeeName(String employeeName) {
             this.employeeName = employeeName;
+            return this;
         }
 
-        public void setDepID(String depID) {
+        public Builder setDepID(String depID) {
             this.depID = depID;
+            return this;
         }
 
-        public void setDepName(String depName) {
+        public Builder setDepName(String depName) {
             this.depName = depName;
+            return this;
         }
 
-        public Employee.Builder copy(Employee employee) {
+        public Builder copy(Employee employee) {
             this.employeeID = employee.employeeID;
             this.employeeName = employee.employeeName;
             this.depID = employee.depID;
             this.depName = employee.depName;
-
 
             return this;
         }
