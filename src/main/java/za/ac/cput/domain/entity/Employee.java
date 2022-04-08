@@ -1,4 +1,4 @@
-package za.ac.cput.entity;
+package za.ac.cput.domain.entity;
 
 public class Employee {
     private String employeeID;
